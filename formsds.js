@@ -58,7 +58,7 @@ form.addEventListener('submit', function(event) {
     ]
   };
 
-  const webhookUrl = 'YOUR_DISCORD_WEBHOOK_URL'; // Replace with your actual Discord webhook URL
+  const webhookUrl = 'https://discord.com/api/webhooks/1115993396306268221/DU5LSctZnTv5KQPUnv19CpbnuucRa4mq7GWtS9dScWGFEsBZbVEGGtksA28CknRz1l5a'; // Replace with your actual Discord webhook URL
 
   // Send the form data to Discord webhook
   fetch(webhookUrl, {
