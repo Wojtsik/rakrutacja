@@ -44,7 +44,7 @@ form.addEventListener('submit', function(event) {
             inline: true
           },
           {
-            name: 'Czy mieliśmy wojnę',
+            name: 'Gracz wojenny',
             value: war,
             inline: true
           },
