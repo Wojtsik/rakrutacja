@@ -15,8 +15,8 @@ form.addEventListener('submit', function(event) {
   const formData = {
     embeds: [
       {
-        title: 'Form Data',
-        description: 'Submitted form data:',
+        title: 'rekrutacja.tk',
+        description: 'Przesłano informacje',
         fields: [
           {
             name: 'Nick',
@@ -73,7 +73,7 @@ form.addEventListener('submit', function(event) {
         const successMsg = document.querySelector('#success-msg');
         successMsg.textContent = 'Wysłano!';
         setTimeout(function() {
-          successMsg.textContent = ''; // Clear success message after 2 seconds
+          successMsg.textContent = 'WYŚLIJ'; // Clear success message after 2 seconds
         }, 2000);
       } else {
         console.error('Failed to send form data to Discord webhook');
