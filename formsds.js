@@ -13,16 +13,52 @@ form.addEventListener('submit', function(event) {
   const powod = document.querySelector('#message').value;
 
   const formData = {
-    nick: nick,
-    poziom: poziom,
-    moc: moc,
-    exp: exp,
-    dsc: dsc,
-    war: war,
-    powod: powod
+    embeds: [
+      {
+        title: 'Form Data',
+        description: 'Submitted form data:',
+        fields: [
+          {
+            name: 'Nick',
+            value: nick,
+            inline: true
+          },
+          {
+            name: 'Poziom',
+            value: poziom,
+            inline: true
+          },
+          {
+            name: 'Ilość mocy',
+            value: moc,
+            inline: true
+          },
+          {
+            name: 'Doświadczenie',
+            value: exp,
+            inline: true
+          },
+          {
+            name: 'Discord',
+            value: dsc,
+            inline: true
+          },
+          {
+            name: 'Czy mieliśmy wojnę',
+            value: war,
+            inline: true
+          },
+          {
+            name: 'Dodatkowe Informacje',
+            value: powod,
+            inline: false
+          }
+        ]
+      }
+    ]
   };
 
-  const webhookUrl = 'https://discord.com/api/webhooks/1115993396306268221/DU5LSctZnTv5KQPUnv19CpbnuucRa4mq7GWtS9dScWGFEsBZbVEGGtksA28CknRz1l5a'; 
+  const webhookUrl = 'YOUR_DISCORD_WEBHOOK_URL'; // Replace with your actual Discord webhook URL
 
   // Send the form data to Discord webhook
   fetch(webhookUrl, {
@@ -40,10 +76,10 @@ form.addEventListener('submit', function(event) {
           successMsg.textContent = ''; // Clear success message after 2 seconds
         }, 2000);
       } else {
-        console.error('Nie udało się wysłać informacji');
+        console.error('Failed to send form data to Discord webhook');
       }
     })
     .catch(error => {
-      console.error('Wystąpił błąd podczas wysyłania wiadomości :', error);
+      console.error('An error occurred while sending form data to Discord webhook:', error);
     });
 });
