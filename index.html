@@ -51,10 +51,10 @@
             <div>
                 <label for="exp" class="formbold-form-label" required="required"> Znajomość gry </label>
                 <select name="exp" id="exp" class="wybor-formbold-form-input">
-                  <option value="max" class="bgc">Wysoka</option>
-                  <option value="med" selected class="bgc">Średnia</option>
-                  <option value="low" class="bgc">Niska</option>
-                  <option value="nul" class="bgc">Zerowa</option>
+                  <option value="wysoka" class="bgc">Wysoka</option>
+                  <option value="srednia" selected class="bgc">Średnia</option>
+                  <option value="niska" class="bgc">Niska</option>
+                  <option value="zerowa" class="bgc">Zerowa</option>
 
 
                 </select>
@@ -64,7 +64,7 @@
           <div class="formbold-input-flex">
             <div style="align-items: center;">
                 <label for="dsc" class="formbold-form-label" required="required"> Czy posiadasz aplikację discord? </label>
-                <select name="dsc" id="exp" class="wybor-formbold-form-input">
+                <select name="dsc" id="dsc" class="wybor-formbold-form-input">
                   <option value="tak" class="bgc">Tak</option>
                   <option value="nie" selected class="bgc">Nie</option>
 
@@ -73,7 +73,7 @@
             </div>
 			<div style="align-items: center;">
                 <label for="war" class="formbold-form-label" required="required"> Czy jesteś graczem wojennym? </label>
-                <select name="war" id="exp" class="wybor-formbold-form-input">
+                <select name="war" id="war" class="wybor-formbold-form-input">
                   <option value="tak" class="bgc">Tak</option>
                   <option value="nie" selected class="bgc">Nie</option>
 
@@ -94,7 +94,7 @@
           </div>
   
           <button class="formbold-btn">
-              WYŚLIJ
+              <p id="success-msg">WYŚLIJ</p>
           </button>
       </form>
     </div>
