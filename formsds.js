@@ -71,7 +71,9 @@ form.addEventListener('submit', function(event) {
     .then(response => {
       if (response.ok) {
         const successMsg = document.querySelector('#success-msg');
-        successMsg.textContent = 'Wysłano!';
+           setTimeout(function() {
+          successMsg.textContent = 'WYSŁANO!'; // Clear success message after 2 seconds
+        }, 200);
         setTimeout(function() {
           successMsg.textContent = 'WYŚLIJ'; // Clear success message after 2 seconds
         }, 2000);
